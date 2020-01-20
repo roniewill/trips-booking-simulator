@@ -1,0 +1,20 @@
+.display-4 {
+  font-size: 2.5rem;
+}
+
+.booking-box {
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 10px 10px 20px -5px #888888;
+}
+
+.booking-box img {
+  height: 100px;
+}
+
+button {
+  text-transform: uppercase;
+}

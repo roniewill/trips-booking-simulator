@@ -1,0 +1,24 @@
+.navbar {
+  background-color: #003580;
+  margin-bottom: 2rem;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar span {
+  margin-left: 10px;
+  font-size: 16px;
+  color: #fafad2;
+}
+
+.navbar a:hover {
+  color: #fafad2;
+}
+
+.navbar a h1 {
+  font-size: 2rem;
+  font-weight: 300;
+}
