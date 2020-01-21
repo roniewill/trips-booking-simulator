@@ -1,0 +1,11 @@
+.loading-box {
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.loading-box strong,
+.loading-box div {
+  text-align: center;
+  font-size: 30px;
+  margin-right: 5px;
+}
