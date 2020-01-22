@@ -5,7 +5,7 @@ import Loading from '../../components/Loading';
 
 import LoadTrips from '../../components/LoadTrips';
 
-export default function Home() {
+export default function Home({ history }) {
   const [trips, setTrips] = useState([]);
   const [load, setLoad] = useState(false);
 
@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div>
       {load && <Loading />}
-      {trips && <LoadTrips trips={trips} />}
+      {trips && <LoadTrips trips={trips} history={history} />}
     </div>
   );
 }

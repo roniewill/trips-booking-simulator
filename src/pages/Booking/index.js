@@ -6,7 +6,7 @@ import { MdDelete, MdAdd, MdRemove } from 'react-icons/md';
 import './booking.css';
 import {
   removeReserve,
-  updateReserve,
+  updateReserveAmountRequest,
 } from '../../store/reducers/booking/actions';
 
 export default function Booking() {
@@ -18,11 +18,11 @@ export default function Booking() {
   }
 
   function plusAmount(trip) {
-    dispatch(updateReserve(trip.id, trip.amount + 1));
+    dispatch(updateReserveAmountRequest(trip.id, trip.amount + 1));
   }
 
   function minusAmount(trip) {
-    dispatch(updateReserve(trip.id, trip.amount - 1));
+    dispatch(updateReserveAmountRequest(trip.id, trip.amount - 1));
   }
 
   return (
