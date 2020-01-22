@@ -1,6 +1,6 @@
 import { select, call, put, all, takeLatest } from 'redux-saga/effects';
 
-import api from '../../../services/api';
+import { api, history } from '../../../services';
 import { addReserveSuccess, updateReserveAmountSuccess } from './actions';
 
 function getStock(id) {
@@ -32,6 +32,7 @@ function* addToReserve({ id }) {
     const response = yield call(api.get, `trips/${id}`);
     const data = { ...response.data, amount: 1 };
     yield put(addReserveSuccess(data));
+    history.push('/booking');
   }
 }
 

@@ -3,12 +3,11 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { addReserveRequest } from '../../store/reducers/booking/actions';
 
-function LoadTrips({ trips, history }) {
+function LoadTrips({ trips }) {
   const dispatch = useDispatch();
 
   function handleSubmit(id) {
     dispatch(addReserveRequest(id));
-    history.push('/booking');
   }
 
   return (
