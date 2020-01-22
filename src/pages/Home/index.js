@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-import api from '../../services/api';
-import Loading from '../../components/Loading';
-
-import LoadTrips from '../../components/LoadTrips';
+import { api } from '../../services';
+import { Loading, LoadTrips } from '../../components';
 
 export default function Home() {
   const [trips, setTrips] = useState([]);
