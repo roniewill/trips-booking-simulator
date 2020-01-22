@@ -7,13 +7,13 @@ export default function Home() {
   const [trips, setTrips] = useState([]);
   const [load, setLoad] = useState(false);
 
+  async function loadTrips() {
+    const res = await api.get('trips');
+    setTrips(res.data);
+  }
+
   useEffect(() => {
     setLoad(true);
-    async function loadTrips(params) {
-      const res = await api.get('trips');
-      setTrips(res.data);
-    }
-
     loadTrips();
     setLoad(false);
   }, []);
