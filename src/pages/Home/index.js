@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 import { api } from '../../services';
-import { Loading, LoadTrips } from '../../components';
+import { Loading } from '../../components';
+import { LoadTripsContainer } from '../../containers';
 
 export default function Home() {
   const [trips, setTrips] = useState([]);
@@ -21,7 +22,7 @@ export default function Home() {
   return (
     <div>
       {load && <Loading />}
-      {trips && <LoadTrips trips={trips} />}
+      {trips && <LoadTripsContainer trips={trips} />}
     </div>
   );
 }
