@@ -9,12 +9,16 @@ export default function Home() {
   const [load, setLoad] = useState(false);
 
   async function loadTrips() {
-    const res = await api.get('trips');
-    setTrips(res.data);
+    setLoad(true);
+    try {
+      const res = await api.get('trips');
+      setTrips(res.data);
+    } catch (error) {
+      console.log('Error finded: ', error);
+    }
   }
 
   useEffect(() => {
-    setLoad(true);
     loadTrips();
     setLoad(false);
   }, []);
