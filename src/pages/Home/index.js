@@ -33,7 +33,7 @@ export default function Home() {
           message="Alguma coisa está errada. Por favor tente em alguns instantes!"
         />
       )}
-      {load && <Loading />}
+      {load && <Loading label="Carregando..." />}
       {trips && <LoadTripsContainer trips={trips} />}
     </div>
   );
