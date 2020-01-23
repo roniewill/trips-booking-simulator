@@ -1,12 +1,10 @@
 import React from 'react';
 
-import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import './header.css';
 
-export default function Header() {
-  const amountReserves = useSelector(state => state.booking.length);
+const Header = ({ amountReserves }) => {
   return (
     <nav className="navbar">
       <div className="container">
@@ -20,4 +18,6 @@ export default function Header() {
       </div>
     </nav>
   );
-}
+};
+
+export default Header;

@@ -3,7 +3,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Router } from 'react-router-dom';
 
-import { Header } from './components';
+import { HeaderContainer } from './containers';
 import Routes from './routes';
 
 import { history } from './services';
@@ -13,7 +13,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <Router history={history}>
-        <Header />
+        <HeaderContainer />
         <div className="container">
           <Routes />
         </div>

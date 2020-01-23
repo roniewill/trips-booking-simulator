@@ -2,7 +2,7 @@ import React from 'react';
 
 import './loading.css';
 
-function Loading(props) {
+const Loading = () => {
   return (
     <div className="d-flex justify-content-center">
       <div className="loading-box">
@@ -11,6 +11,6 @@ function Loading(props) {
       </div>
     </div>
   );
-}
+};
 
 export default Loading;
