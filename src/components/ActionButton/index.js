@@ -1,12 +1,12 @@
 import React from 'react';
 
-const ActionButton = ({ label, btnClass, onSubmit, disabled }) => {
+const ActionButton = ({ label, className, onClick, disabled }) => {
   return (
     <button
       type="button"
-      className={btnClass}
-      onClick={onSubmit}
-      disabled={disabled}
+      className={className}
+      onClick={onClick}
+      disabled={disabled ? disabled : false}
     >
       {label}
     </button>
