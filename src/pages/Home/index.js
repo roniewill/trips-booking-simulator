@@ -14,11 +14,10 @@ export default function Home() {
     try {
       const res = await api.get('trips');
       setTrips(res.data);
-      setLoad(false);
     } catch (error) {
       setError(true);
-      setLoad(false);
     }
+    setLoad(false);
   }
 
   useEffect(() => {
